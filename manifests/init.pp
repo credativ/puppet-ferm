@@ -2,7 +2,8 @@ class ferm (
     $ensure         = params_lookup('ensure'),
     $ensure_running = params_lookup('ensure_running'),
     $ensure_enabled = params_lookup('ensure_enabled'),
-    $disabled_hosts = params_lookup('disabled_hosts')
+    $disabled_hosts = params_lookup('disabled_hosts'),
+    $snat_to        = params_lookup('snat_to')
 ) inherits ferm::params {
 
     package { 'ferm':
@@ -10,7 +11,7 @@ class ferm (
     }
 
     file { '/etc/ferm/ferm.conf':
-        source  => 'puppet:///modules/ferm/ferm.conf',
+        source  => template('ferm/ferm.conf.erb'),
         ensure  => present,
         mode    => '0644',
         owner   => 'root',

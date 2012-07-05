@@ -20,8 +20,10 @@ table filter {
     chain FORWARD policy ACCEPT;
 }
 
+<%= if snat_to -%>
 table nat {
 	chain POSTROUTING {
-	    saddr $NET_INTERN outerface $DEV_EXT MASQUERADE;
+    saddr $NET_INTERN outerface $DEV_EXT SNAT --to <%= snat_to %>;
 	}
-}
+    }
+<%= end %>
