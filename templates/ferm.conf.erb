@@ -25,5 +25,5 @@ table nat {
 	chain POSTROUTING {
     saddr $NET_INTERN outerface $DEV_EXT SNAT --to <%= snat_to %>;
 	}
-    }
-<%= end %>
+}
+<% end %>
