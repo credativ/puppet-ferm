@@ -11,8 +11,8 @@ class ferm (
     }
 
     file { '/etc/ferm/ferm.conf':
-        content => template('ferm/ferm.conf.erb'),
         ensure  => present,
+        content => template('ferm/ferm.conf.erb'),
         mode    => '0644',
         owner   => 'root',
         group   => 'root',
