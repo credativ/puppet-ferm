@@ -29,7 +29,7 @@ class ferm (
     }
 
     if $::hostname in $disabled_hosts {
-        Service <| title == 'gld' |> {
+        Service <| title == 'ferm' |> {
             ensure  => 'stopped',
             enabled => false,
         }
