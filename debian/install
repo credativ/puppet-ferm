@@ -1,2 +1,2 @@
-manifests   etc/puppet/modules/ferm
-templates   etc/puppet/modules/ferm
+manifests   usr/share/puppet/modules.available/ferm
+templates   usr/share/puppet/modules.available/ferm
