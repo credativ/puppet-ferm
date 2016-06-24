@@ -1,3 +1,9 @@
+puppet-module-ferm (1.0.3) UNRELEASED; urgency=medium
+
+  * Add/Update common module files
+
+ -- Patrick Schoenfeld <patrick.schoenfeld@credativ.de>  Fri, 24 Jun 2016 15:15:25 +0000
+
 puppet-module-ferm (1.0.2) unstable; urgency=medium
 
   * Change module path
